@@ -1,4 +1,5 @@
 import { Title } from "./components/Title/";
+import { Todo } from "./components/Todo";
 import { TodoInput } from "./components/TodoInput";
 import { TodoList } from "./components/TodoList";
 
@@ -9,8 +10,7 @@ function App() {
         <Title />
         <TodoInput />
         <TodoList>
-          <h2>Todos List</h2>
-          <p>lorem ipsum dolor at sit amet </p>
+          <Todo />
         </TodoList>
       </div>
     </div>
