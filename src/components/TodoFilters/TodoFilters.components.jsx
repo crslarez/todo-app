@@ -1,0 +1,16 @@
+const FiltersContainer =( { children }) => {
+    return (
+    <div className="flex-center justify-between p-4 bg-gray-700 border-b border-solid border-gray-500">
+    {children}
+    </div>
+    )
+}
+
+const ItemsLeft = ({ total = 0 }) => {
+    return (
+        <p className="text-gray-400 text-sm">
+            {total} items left
+        </p>
+    )
+}
+export { FiltersContainer, ItemsLeft }
