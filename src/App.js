@@ -11,10 +11,6 @@ function App() {
         <TodoInput />
         <TodoList>
           <Todo />
-          <Todo />
-          <Todo />
-          <Todo />
-          <Todo />
         </TodoList>
       </div>
     </div>
