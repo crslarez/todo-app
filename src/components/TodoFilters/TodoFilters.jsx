@@ -1,5 +1,4 @@
 import { FiltersContainer, ItemsLeft } from "./TodoFilters.components"
-
 const TodoFilters = () => {
     return (
         <FiltersContainer>
