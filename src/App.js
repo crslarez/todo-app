@@ -45,15 +45,19 @@ const addTodo = (title) => {
 
 const handleSetComplete = (id) => {
   const updatedList = todos.map(todo => {
-    if(todo.id === id) {
+    if (todo.id === id) {
       return { ...todo, completed: !todo.completed}
-    }
-    return todo
-
-  }) 
+  } 
+  return todo
+  })
+  setTodos(updatedList);
 }
 
+const handleDelete = (id) => {
+  const updatedList = todos.filter(todo => todo.id !== id)
+  setTodos(updatedList);
 
+}
   return (
     <div className="bg-gray-900 min-h-screen h-full font-inter text-gray-100 flex items-center justify-center py-20 px-5">
       <div className="container flex flex-col max-w-xl">
@@ -61,7 +65,8 @@ const handleSetComplete = (id) => {
         <TodoInput addTodo={addTodo} />
         <TodoList 
         todos={todos}
-        handleSetComplete={handleSetComplete} />
+        handleSetComplete={handleSetComplete}
+        handleDelete={handleDelete} />
 
       </div>
     </div>
